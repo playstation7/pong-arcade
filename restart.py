@@ -35,9 +35,9 @@ class Restart():
                             
                     
             else:
-                self.image = pygame.image.load('images/reset.png')
+                self.image = pygame.image.load('reset.png')
         else:
-                self.image = pygame.image.load('images/reset.png')
+                self.image = pygame.image.load('reset.png')
 class Continue():
     """Class for creating continue button in menu"""
     def __init__(self,screen):
@@ -56,7 +56,7 @@ class Continue():
     def continue_press(self):
         if pygame.mouse.get_pos()[0] > self.rect.x and pygame.mouse.get_pos()[0] < self.rect.x + self.rect.width:
             if pygame.mouse.get_pos()[1] > self.rect.y and pygame.mouse.get_pos()[1] < self.rect.y + self.rect.height:
-                self.image = pygame.image.load('images/continue2.png')
+                self.image = pygame.image.load('continue2.png')
                 
                 for event in pygame.event.get():
                     if event.type == pygame.MOUSEBUTTONDOWN:
