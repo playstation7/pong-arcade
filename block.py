@@ -2,7 +2,7 @@ from pygame.sprite import Sprite
 import pygame
 
 class Block(Sprite):
-    """ Класс для создание блоков"""
+    """Class for create blocks"""
     def __init__(self,screen,block_row=1):
         super(Block,self).__init__()
         self.screen = screen
