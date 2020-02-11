@@ -23,7 +23,7 @@ class Restart():
         """Check cursor position,that user can press reset button"""
         if pygame.mouse.get_pos()[0] > self.rect.x and pygame.mouse.get_pos()[0] < self.rect.x + self.rect.width:
             if pygame.mouse.get_pos()[1] > self.rect.y and pygame.mouse.get_pos()[1] < self.rect.y + self.rect.height:
-                self.image = pygame.image.load('images/reset2.png')
+                self.image = pygame.image.load('reset2.png')
                 for event in pygame.event.get():
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         if event.button == 1:
@@ -43,7 +43,7 @@ class Continue():
     def __init__(self,screen):
         self.screen = screen
         self.screen_rect = self.screen.get_rect()
-        self.image = pygame.image.load('images/continue.png')
+        self.image = pygame.image.load('continue.png')
         self.image = pygame.transform.scale2x(self.image)
         self.rect = self.image.get_rect()
         
@@ -64,10 +64,10 @@ class Continue():
                             return True
                     
             else:
-                self.image = pygame.image.load('images/continue.png')
+                self.image = pygame.image.load('continue.png')
                 
         else:
-                self.image = pygame.image.load('images/continue.png')
+                self.image = pygame.image.load('continue.png')
                 
 
 class Volume_button():
@@ -77,10 +77,10 @@ class Volume_button():
         self.screen_rect = self.screen.get_rect()
         self.volume = volume
         if self.volume.volume_status:
-            self.image = pygame.image.load('images/volumueon.png')#pygame.transform.rotate(pygame.image.load('images/volumueon.png'),25)
+            self.image = pygame.image.load('volumueon.png')#pygame.transform.rotate(pygame.image.load('images/volumueon.png'),25)
             
         else:
-            self.image = pygame.image.load('images/volumueoff.png')
+            self.image = pygame.image.load('volumueoff.png')
         
         self.rect = self.image.get_rect()
         
@@ -100,24 +100,24 @@ class Volume_button():
                     if event.type == pygame.MOUSEBUTTONDOWN:
                         if event.button == 1:
                             if self.volume.volume_status:
-                                self.image = pygame.image.load('images/volumueoff.png')
+                                self.image = pygame.image.load('volumueoff.png')
                                 self.volume.volume_status = False
                             else:
-                                self.image = pygame.image.load('images/volumueon.png')
+                                self.image = pygame.image.load('volumueon.png')
                                 self.volume.volume_status = True
                                 
 class Exit():
-    """Класс для создания кнопки выхода"""
+    """Class for exit bottun"""
     def __init__(self,screen):
         self.screen = screen
         self.screen_rect = self.screen.get_rect()
-        self.image = pygame.image.load('images/exit.png')
+        self.image = pygame.image.load('exit.png')
         self.rect = self.image.get_rect()
         
         self.rect.x = self.screen_rect.width - 60
         self.rect.y = self.screen_rect.bottom - 60
         
-        #Настройки для создания анимации
+        #Settings for create animations
         self.color = (253,124,165)
         #self.pos_x = self.rect.x + round((self.rect.width / 2))
         #self.pos_x_2 = self.rect.x
