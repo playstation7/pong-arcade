@@ -71,9 +71,10 @@ def run():
             ball.mox_y_f = 0
         
         else:
+            print_counter(screen,settings.score,(500,270))  #print number score 
             ball.update(blocks,background,background_rect,screen,settings)
             ball.blit()
-            print_counter(screen,settings.score,(500,270))  #print number score 
+            
         
         blocks.draw(screen)
         
